@@ -1,0 +1,443 @@
+/* Home section: back ground image only here*/
+
+
+/* Home section */
+#home {
+    min-height: 85vh;
+    padding: 60px 8%;
+    box-sizing: border-box;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.45),
+                        rgba(0, 0, 0, 0.45)),
+        url("./images/bakery.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+    text-align: center;
+}
+
+/* Welcome text */
+#home .welcome-text {
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #f4c98a;
+    margin-bottom: 20px;
+}
+
+/* Main heading */
+#home h1 {
+    font-size: 42px;
+    color: white;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Subtitle */
+#home h2 {
+    font-size: 26px;
+    color: #f4c98a;
+    margin: 20px 0;
+}
+
+/* Description paragraphs */
+#home p {
+    max-width: 800px;
+    margin: 15px auto;
+    font-size: 18px;
+    line-height: 1.8;
+    color: white;
+}
+
+/* Welcome text adjustment */
+#home .welcome-text {
+    color: #f4c98a;
+    line-height: 1.5;
+}
+
+/* Buttons container */
+.home-buttons {
+    margin-top: 30px;
+}
+
+/* Both buttons */
+.home-buttons a {
+    display: inline-block;
+    padding: 14px 28px;
+    margin: 5px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+/* Explore menu button */
+.menu-button {
+    background-color: #d18b47;
+    color: white;
+}
+
+.menu-button:hover {
+    background-color: #8b4513;
+}
+
+/* Contact button */
+.contact-button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.contact-button:hover {
+    background-color: #8b4513;
+}
+
+/* Closing slogan */
+#home .home-slogan {
+    margin-top: 30px;
+    font-size: 18px;
+    font-style: italic;
+}
+
+
+/*  Navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #fff8ef;
+}
+
+/* Bakery logo */
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #603b2a;
+    text-decoration: none;
+}
+
+/* Navigation links */
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #603b2a;
+    font-size: 16px;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+    color: #d18b47;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Keep the navbar visible while scrolling */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+
+/* Products Section */
+#products_section {
+    padding: 60px 5%;
+    background-color: #fffaf3;
+    color: #603b2a;
+}
+
+/* Section Heading */
+#products_section h2 {
+    text-align: center;
+    font-size: 34px;
+    color: #6b351c;
+    margin: 0 0 12px;
+    font-weight: bold;
+}
+
+/* Section Introduction */
+#products_section > p {
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+    line-height: 1.6;
+    margin: 0 0 35px;
+}
+
+/* Products Container */
+.products_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Product Card */
+.product_card {
+    width: 300px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border: 1px solid #f0dfcc;
+    border-radius: 15px;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+    font-family: Arial, sans-serif;
+}
+
+/* Product Image */
+.product_card img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+/* Product Name */
+.product_card h3 {
+    color: #6b351c;
+    font-size: 21px;
+    margin: 15px 0 8px;
+}
+
+/* Product Description */
+.product_card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 15px;
+}
+
+/* Product Price */
+.product_card span {
+    display: block;
+    color: #a0522d;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Add to Cart Button */
+.product_card button {
+    width: 100%;
+    padding: 12px;
+    background-color: #8b4513;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+.product_card button:hover {
+    background-color: #c07838;
+}
+
+/* Product Card Hover Effect */
+.product_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+
+
+
+
+/* About Us Section */
+#about_us {
+    padding: 60px 8%;
+    background-color: #fffaf3;
+    color: #603b2a;
+    text-align: center;
+}
+
+/* Main Heading */
+#about_us h2 {
+    font-size: 34px;
+    color: #6b351c;
+    margin-bottom: 25px;
+}
+
+/* Introduction */
+#about_us .about-intro {
+    max-width: 850px;
+    margin: 0 auto 35px;
+    font-size: 17px;
+    line-height: 1.9;
+    color: #604b40;
+}
+
+/* Mission and Why Choose Us */
+#about_us .about-mission,
+#about_us .about-why {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #f5e6d3;
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* Subheadings */
+#about_us h3 {
+    font-size: 25px;
+    color: #a0522d;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Paragraphs inside content boxes */
+#about_us .about-mission p {
+    max-width: 750px;
+    margin: 0 auto;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #604b40;
+}
+
+/* Why Choose Us List */
+#about_us ul {
+    max-width: 750px;
+    margin: 20px auto 0;
+    padding-left: 25px;
+    text-align: left;
+}
+
+/* List Items */
+#about_us li {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    color: #604b40;
+}
+
+/* Emphasize Important Words */
+#about_us li strong {
+    color: #6b351c;
+}
+
+/* Closing Message */
+#about_us .about-closing {
+    max-width: 800px;
+    margin: 35px auto 0;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.8;
+    color: #6b351c;
+}
+
+
+/* Contact Section */
+#contact {
+    padding: 60px 8%;
+    background-color: #f5e6d3;
+    color: #603b2a;
+    text-align: center;
+}
+
+/* Main Heading */
+#contact h2 {
+    font-size: 34px;
+    color: #6b351c;
+    margin-bottom: 20px;
+}
+
+/* Introduction */
+#contact .contact-intro {
+    max-width: 800px;
+    margin: 0 auto 35px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #604b40;
+}
+
+/* Contact Information and Opening Hours */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Both Content Boxes */
+.contact-info,
+.opening-hours {
+    flex: 1;
+    padding: 25px;
+    background-color: #fffaf3;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+}
+
+/* Subheadings */
+#contact h3 {
+    font-size: 24px;
+    color: #a0522d;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Paragraphs */
+#contact p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #604b40;
+}
+
+/* Contact Details */
+.contact-info p {
+    margin: 15px 0;
+}
+
+/* Clickable Contact Links */
+#contact a {
+    color: #8b4513;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    color: #d18b47;
+    text-decoration: underline;
+}
+
+/* Closing Message */
+#contact .contact-message {
+    margin: 35px auto 0;
+    font-size: 17px;
+    font-style: italic;
+    color: #6b351c;
+}
+
+
