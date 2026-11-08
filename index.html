@@ -1,299 +1,315 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+
+    <title>Peter's Bakery</title>
+
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
+
+    <!-- Navigation Bar -->
     <nav class="navbar">
-        <a href="#home" class="logo">Sweet Crumbs</a>
+
+        <a href="./index.html" class="logo">
+            Peter's Bakery
+        </a>
 
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#products_section">Our Products</a></li>
-            <li><a href="#about_us">About Us</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./products.html">Our Products</a></li>
+            <li><a href="./about_us.html">About Us</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li ><a href="#order">My order</a></li>
-            </ul>
-        </nav>
+            <li><a href="./my_order.html">My Order</a></li>
+        </ul>
+
+    </nav>
 
 
+    <main>
 
-<div id="home">
-    <p class="welcome-text">WELCOME TO SWEET CRUMBS BAKERY</p>
+        <!-- HOME SECTION -->
+        <section id="home">
 
-    <h1>Freshly Baked Happiness, Every Day.</h1>
+            <!-- Background Video -->
+            <video autoplay muted loop playsinline class="background-video">
 
-    <h2>Freshly Baked, Made with Love</h2>
+                <source src="./videos/background-video.mp4"
+                        type="video/mp4">
 
-    <p>
-        Discover delicious cakes, freshly baked bread,
-        crispy croissants, and delightful pastries,
-        carefully prepared with love and quality ingredients.
-    </p>
+                Your browser does not support the video element.
 
-    <p>
-        Whether you are celebrating a special occasion
-        or simply craving something sweet, we have
-        the perfect treat for you.
-    </p>
+            </video>
 
-    <div class="home-buttons">
-        <a href="#products_section" class="menu-button">
-            Explore Our Menu
-        </a>
+            <!-- Dark Overlay and Home Content -->
+            <div class="home-content">
 
-        <a href="#contact" class="contact-button">
-            Contact Us
-        </a>
-    </div>
+                <p class="welcome-text">
+                    WELCOME TO PETER'S BAKERY
+                </p>
 
-    <p class="home-slogan">
-        Your happiness is our favorite recipe.
-    </p>
-</div>
+                <h1>Freshly Baked Happiness, Every Day.</h1>
 
+                <h2>Freshly Baked, Made with Love</h2>
 
+                <p>
+                    Discover delicious cakes, freshly baked bread,
+                    crispy croissants, and delightful pastries,
+                    carefully prepared with love and quality ingredients.
+                </p>
 
+                <p>
+                    Whether you are celebrating a special occasion
+                    or simply craving something sweet, we have
+                    the perfect treat for you.
+                </p>
 
-<!-- Products Section -->
-<section id="products_section">
+                <div class="home-buttons">
 
-    <h2>Our Delicious Products</h2>
-    <p class="products-intro">
-        Freshly baked with love, just for you.
-    </p>
+                    <a href="#categories_section" class="menu-button">
+                        Explore Our Menu
+                    </a>
 
-    <div class="products_container">
+                    <a href="#contact" class="contact-button">
+                        Contact Us
+                    </a>
 
-        <!-- Bread Products -->
-        <div class="product_card">
-            <img src="./images/bread.jpg" alt="Fresh bakery bread">
-            <h3>Classic Bread</h3>
-            <p>Soft, freshly baked bread perfect for everyday meals.</p>
-            <span>Ksh 1,400</span>
-            <button type="button">Add to Cart</button>
-        </div>
+                </div>
 
-        <div class="product_card">
-            <img src="./images/bread1.jpg" alt="Fresh loaf of bread">
-            <h3>Fresh Loaf</h3>
-            <p>A delicious loaf baked with care for your family.</p>
-            <span>Ksh 1,400</span>
-            <button type="button">Add to Cart</button>
-        </div>
+                <p class="home-slogan">
+                    Your happiness is our favorite recipe.
+                </p>
 
-        <div class="product_card">
-            <img src="./images/bread2.jpg" alt="Bakery bread selection">
-            <h3>Bakery Bread</h3>
-            <p>Enjoy a freshly baked loaf with a soft, tasty texture.</p>
-            <span>Ksh 1,400</span>
-            <button type="button">Add to Cart</button>
-        </div>
+            </div>
 
-        <div class="product_card">
-            <img src="./images/bread3.jpg" alt="Freshly baked sweet bread">
-            <h3>Special Bread</h3>
-            <p>A satisfying bakery favourite made for sharing.</p>
-            <span>Ksh 1,400</span>
-            <button type="button">Add to Cart</button>
-        </div>
-
-        <!-- Croissant Products -->
-        <div class="product_card">
-            <img src="./images/croissant1.jpg" alt="Golden bakery croissant">
-            <h3>Butter Croissant</h3>
-            <p>A flaky, golden pastry perfect for breakfast.</p>
-            <span>Ksh 1,400</span>
-            <button type="button">Add to Cart</button>
-        </div>
-
-        <div class="product_card">
-            <img src="./images/croissant2.jpg" alt="Freshly baked croissant">
-            <h3>Classic Croissant</h3>
-            <p>A light, crisp pastry to enjoy with your favourite drink.</p>
-            <span>Ksh 1,400</span>
-            <button type="button">Add to Cart</button>
-        </div>
-
-        <!-- Cake Products -->
-        <div class="product_card">
-            <img src="./images/cake2.jpg" alt="Bakery celebration cake">
-            <h3>Celebration Cake</h3>
-            <p>A delightful cake for birthdays and special occasions.</p>
-            <span>Ksh 1,400</span>
-            <button type="button">Add to Cart</button>
-        </div>
-
-        <div class="product_card">
-            <img src="./images/cake2.jpg" alt="Decorated bakery cake">
-            <h3>Special Cake</h3>
-            <p>A sweet treat to make your special moments memorable.</p>
-            <span>Ksh 1,400</span>
-            <button type="button">Add to Cart</button>
-        </div>
-
-        <div class="product_card">
-            <img src="./images/cakes3.jpg" alt="Beautifully decorated cake">
-            <h3>Decorated Cake</h3>
-            <p>A beautifully presented cake for sharing and celebrating.</p>
-            <span>Ksh 1,400</span>
-            <button type="button">Add to Cart</button>
-        </div>
-
-        <div class="product_card">
-            <img src="./images/cake6.jpg" alt="Beautifully decorated cake">
-            <h3>Decorated Cake</h3>
-            <p>A beautifully presented cake for sharing and celebrating.</p>
-            <span>Ksh 1,400</span>
-            <button type="button">Add to Cart</button>
-        </div>
-
-        <div class="product_card">
-            <img src="./images/cake7.jpg" alt="Beautifully decorated cake">
-            <h3>Decorated Cake</h3>
-            <p>A beautifully presented cake for sharing and celebrating.</p>
-            <span>Ksh 1,400</span>
-            <button type="button">Add to Cart</button>
-        </div>
-
-        <div class="product_card">
-            <img src="./images/cake8.jpg" alt="Beautifully decorated cake">
-            <h3>Decorated Cake</h3>
-            <p>A beautifully presented cake for sharing and celebrating.</p>
-            <span>Ksh 1,400</span>
-            <button type="button">Add to Cart</button>
-        </div>
-
-        <div class="product_card">
-            <img src="./images/cake9.jpg" alt="Beautifully decorated cake">
-            <h3>Decorated Cake</h3>
-            <p>A beautifully presented cake for sharing and celebrating.</p>
-            <span>Ksh 1,400</span>
-            <button type="button">Add to Cart</button>
-        </div>
-
-    </div>
-</section>
+        </section>
 
 
+        <!-- PRODUCT CATEGORIES SECTION -->
+        <section id="categories_section">
 
-<!-- About Us Section -->
-<section id="about_us">
-    <h2>About Sweet Crumbs Bakery</h2>
+            <h2>Explore Our Categories</h2>
 
-    <p class="about-intro">
-        At Sweet Crumbs Bakery, we believe every bite should
-        bring happiness. We are passionate about creating fresh,
-        delicious, and high-quality baked goods that make every
-        moment special.
+            <p class="categories-intro">
+                Discover our delicious selection of freshly prepared
+                bakery products. Choose a category to explore more.
+            </p>
 
-        From beautifully decorated cakes and soft, freshly baked
-        bread to crispy croissants and delightful pastries,
-        our products are prepared with care and a love for baking.
-    </p>
+            <div class="categories-container">
 
-    <div class="about-mission">
-        <h3>Our Mission</h3>
+                <!-- Cakes -->
+                <div class="category-card">
+
+                    <img src="./images/cake5.jpg"
+                         alt="Delicious decorated cakes">
+
+                    <h3>Cakes</h3>
+
+                    <p>
+                        Enjoy delicious cakes for birthdays,
+                        celebrations and special occasions.
+                    </p>
+
+                    <a href="./cakes.html" class="category-button">
+                        See More
+                    </a>
+
+                </div>
+
+
+                <!-- Croissants -->
+                <div class="category-card">
+
+                    <img src="./images/croissant5.jpg"
+                         alt="Freshly baked croissants">
+
+                    <h3>Croissants</h3>
+
+                    <p>
+                        Discover our crispy, golden and
+                        deliciously baked croissants.
+                    </p>
+
+                    <a href="./croissants.html" class="category-button">
+                        See More
+                    </a>
+
+                </div>
+
+
+                <!-- Sandwiches -->
+                <div class="category-card">
+
+                    <img src="./images/sandwich5.png"
+                         alt="Fresh sandwiches">
+
+                    <h3>Sandwiches</h3>
+
+                    <p>
+                        Enjoy tasty sandwiches prepared
+                        with fresh and quality ingredients.
+                    </p>
+
+                    <a href="./sandwiches.html" class="category-button">
+                        See More
+                    </a>
+
+                </div>
+
+
+                <!-- Bread -->
+                <div class="category-card">
+
+                    <img src="./images/bread5.jpg"
+                         alt="Freshly baked bread">
+
+                    <h3>Breads</h3>
+
+                    <p>
+                        Explore our selection of fresh,
+                        soft and delicious breads.
+                    </p>
+
+                    <a href="./breads.html" class="category-button">
+                        See More
+                    </a>
+
+                </div>
+
+
+                <!-- Biscuits and Cookies -->
+                <div class="category-card">
+
+                    <img src="./images/biscuit5.jpg"
+                         alt="Biscuits and cookies">
+
+                    <h3>Biscuits and Cookies</h3>
+
+                    <p>
+                        Enjoy crunchy biscuits and
+                        delicious cookies for every occasion.
+                    </p>
+
+                    <a href="./biscuits_cookies.htm" class="category-button">
+                        See More
+                    </a>
+
+                </div>
+
+
+                <!-- Chocolates -->
+                <div class="category-card">
+
+                    <img src="./images/chocolate5.jpg"
+                         alt="Delicious chocolates">
+
+                    <h3>Chocolates</h3>
+
+                    <p>
+                        Discover our delicious chocolate
+                        treats and sweet delights.
+                    </p>
+
+                    <a href="./chocolates.html" class="category-button">
+                        See More
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="all-products-button">
+
+                <a href="./products.html">
+                    View All Products
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT SECTION -->
+        <section id="contact">
+
+            <h2>Contact Us</h2>
+
+            <p class="contact-intro">
+                We would love to hear from you! Whether you have
+                a question, want to place an order, or need more
+                information about our products, feel free to contact us.
+            </p>
+
+            <div class="contact-container">
+
+                <!-- Contact Information -->
+                <div class="contact-info">
+
+                    <h3>Get in Touch</h3>
+
+                    <p>
+                        <strong>Address:</strong>
+                        Thika, Kenya
+                    </p>
+
+                    <p>
+                        <strong>Phone:</strong>
+                        <a href="tel:+254118430802">
+                            +254 118 430 802
+                        </a>
+                    </p>
+
+                    <p>
+                        <strong>Email:</strong>
+                        <a href="mailto:matemberajosue1@gmail.com">
+                            matemberajosue1@gmail.com
+                        </a>
+                    </p>
+
+                </div>
+
+
+                <!-- Opening Hours -->
+                <div class="opening-hours">
+
+                    <h3>Opening Hours</h3>
+
+                    <p><strong>Monday - Saturday:</strong></p>
+
+                    <p>8:00 AM - 7:00 PM</p>
+
+                    <p><strong>Sunday:</strong></p>
+
+                    <p>9:00 AM - 4:00 PM</p>
+
+                </div>
+
+            </div>
+
+            <p class="contact-message">
+                Thank you for choosing Peter's Bakery.
+                We look forward to serving you!
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
 
         <p>
-            Our mission is to bring happiness to our customers
-            by offering delicious baked goods, friendly service,
-            and quality products for every occasion.
+            &copy; 2026 Peter's Bakery. All Rights Reserved.
         </p>
-    </div>
 
-    <div class="about-why">
-        <h3>Why Choose Us?</h3>
+    </footer>
 
-        <ul>
-            <li>
-                <strong>Freshness:</strong>
-                We strive to provide freshly baked products
-                for you to enjoy.
-            </li>
-
-            <li>
-                <strong>Quality:</strong>
-                We focus on quality ingredients and careful
-                preparation.
-            </li>
-
-            <li>
-                <strong>Variety:</strong>
-                We offer cakes, breads, croissants, and other
-                delightful pastries.
-            </li>
-
-            <li>
-                <strong>Customer Satisfaction:</strong>
-                We value our customers and aim to make every
-                visit a pleasant experience.
-            </li>
-        </ul>
-    </div>
-
-    <p class="about-closing">
-        At Sweet Crumbs Bakery, your happiness is our favorite
-        recipe. Thank you for making us part of your special moments!
-    </p>
-</section>
-
-<!-- contact section -->
-
-
-<section id="contact">
-    <h2>Contact Us</h2>
-
-    <p class="contact-intro">
-        We would love to hear from you! Whether you have
-        a question, want to place an order, or need more
-        information about our products, feel free to contact us.
-    </p>
-
-    <div class="contact-container">
-
-        <div class="contact-info">
-            <h3>Get in Touch</h3>
-
-            <p>
-                <strong>Address:</strong>
-                Thika, Kenya
-            </p>
-
-            <p>
-                <strong>Phone:</strong>
-                <a href="tel:+254118430802">+254 118 430 802</a>
-            </p>
-
-            <p>
-                <strong>Email:</strong>
-                <a href="mailto:sweetcrumbs@gmail.com">
-                    sweetcrumbs@gmail.com
-                </a>
-            </p>
-        </div>
-
-        <div class="opening-hours">
-            <h3>Opening Hours</h3>
-
-            <p><strong>Monday - Saturday:</strong></p>
-            <p>8:00 AM - 7:00 PM</p>
-
-            <p><strong>Sunday:</strong></p>
-            <p>9:00 AM - 4:00 PM</p>
-        </div>
-
-    </div>
-
-    <p class="contact-message">
-        Thank you for choosing Sweet Crumbs Bakery.
-        We look forward to serving you!
-    </p>
-</section>
-
-    
 </body>
+
 </html>
