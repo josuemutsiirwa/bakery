@@ -1,136 +1,472 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+
+    <meta name="description" content="Explore all freshly baked products at Peter's Bakery, including cakes, breads, croissants, chocolates, biscuits, cookies and sandwiches.">
+
+    <title>Our Products | Peter's Bakery</title>
+
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-        <nav class="navbar">
-        <a href="#home" class="logo">Peter's bakery</a>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" aria-label="Main navigation">
+
+        <a href="./index.html" class="logo">Peter's Bakery</a>
 
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="/products.html">Our Products</a></li>
-            <li><a href="#about_us">About Us</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li ><a href="#order">My order</a></li>
-            </ul>
-        </nav>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./products.html" aria-current="page">Our Products</a></li>
+            <li><a href="./about_us.html">About Us</a></li>
+            <li><a href="./index.html#contact">Contact</a></li>
+            <li><a href="./my_order.html">My Order</a></li>
+        </ul>
 
-    <!-- Products Section -->
-<section id="products_section">
-
-    <h2>Our Delicious Products</h2>
-    <p class="products-intro">
-        Freshly baked with love, just for you.
-    </p>
-
-    <div class="products_container">
-
-        <!-- Bread Products -->
-        <div class="product_card">
-            <img src="./images/bread1.jpg" alt="Fresh bakery bread">
-            <h3>Classic Bread</h3>
-            <p>Soft, freshly baked bread perfect for everyday meals.</p>
-            <span>Ksh 1,499</span>
-            <button type="button">Add to Cart</button>
-        </div>
-
-        <div class="product_card">
-            <img src="./images/bread2.jpg" alt="Fresh loaf of bread">
-            <h3>Fresh Loaf</h3>
-            <p>A delicious loaf baked with care for your family.</p>
-            <span>Ksh 1,299</span>
-            <button type="button">Add to Cart</button>
-        </div>
-
-        <div class="product_card">
-            <img src="./images/bread3.jpg" alt="Bakery bread selection">
-            <h3>Bakery Bread</h3>
-            <p>Enjoy a freshly baked loaf with a soft, tasty texture.</p>
-            <span>Ksh 1,399</span>
-            <button type="button">Add to Cart</button>
-        </div>
-
-        <div class="product_card">
-            <img src="./images/bread4.jpg" alt="Freshly baked sweet bread">
-            <h3>Special Bread</h3>
-            <p>A satisfying bakery favourite made for sharing.</p>
-            <span>Ksh 799</span>
-            <button type="button">Add to Cart</button>
-        </div>
-
-        <!-- Croissant Products -->
-        <div class="product_card">
-            <img src="./images/croissant1.jpg" alt="Golden bakery croissant">
-            <h3>Butter Croissant</h3>
-            <p>A flaky, golden pastry perfect for breakfast.</p>
-            <span>Ksh 999</span>
-            <button type="button">Add to Cart</button>
-        </div>
-
-        <div class="product_card">
-            <img src="./images/croissant2.jpg" alt="Freshly baked croissant">
-            <h3>Classic Croissant</h3>
-            <p>A light, crisp pastry to enjoy with your favourite drink.</p>
-            <span>Ksh 1599</span>
-            <button type="button">Add to Cart</button>
-        </div>
-
-        <!-- Cake Products -->
-        <div class="product_card">
-            <img src="./images/cake2.jpg" alt="Bakery celebration cake">
-            <h3>Celebration Cake</h3>
-            <p>A delightful cake for birthdays and special occasions.</p>
-            <span>Ksh 2,999</span>
-            <button type="button">Add to Cart</button>
-        </div>
-
-        <div class="product_card">
-            <img src="./images/cake2.jpg" alt="Decorated bakery cake">
-            <h3>Special Cake</h3>
-            <p>A sweet treat to make your special moments memorable.</p>
-            <span>Ksh 2,599</span>
-            <button type="button">Add to Cart</button>
-        </div>
-
-        <div class="product_card">
-            <img src="./images/cakes3.jpg" alt="Beautifully decorated cake">
-            <h3>Decorated Cake</h3>
-            <p>A beautifully presented cake for sharing and celebrating.</p>
-            <span>Ksh 2,799</span>
-            <button type="button">Add to Cart</button>
-        </div>
-
-        <div class="product_card">
-            <img src="./images/cake6.jpg" alt="Beautifully decorated cake">
-            <h3>Decorated Cake</h3>
-            <p>A beautifully presented cake for sharing and celebrating.</p>
-            <span>Ksh 2,199</span>
-            <button type="button">Add to Cart</button>
-        </div>
-
-        <div class="product_card">
-            <img src="./images/cake7.jpg" alt="Beautifully decorated cake">
-            <h3>Decorated Cake</h3>
-            <p>A beautifully presented cake for sharing and celebrating.</p>
-            <span>Ksh 2,899</span>
-            <button type="button">Add to Cart</button>
-        </div>
-
-        <div class="product_card">
-            <img src="./images/cake8.jpg" alt="Beautifully decorated cake">
-            <h3>Decorated Cake</h3>
-            <p>A beautifully presented cake for sharing and celebrating.</p>
-            <span>Ksh 1,499</span>
-            <button type="button">Add to Cart</button>
-        </div>
+    </nav>
 
 
+    <main>
 
-    </div>
-</section>
+        <!-- Page Introduction -->
+        <header class="products-intro">
+            <h1>Our Products</h1>
+
+            <p>
+                Welcome to Peter's Bakery. Explore our delicious selection
+                of freshly baked products, prepared with care and love.
+                From cakes and breads to sandwiches and sweet treats,
+                there is something for everyone.
+            </p>
+        </header>
+
+
+        <!-- ================================= -->
+        <!-- BREADS SECTION -->
+        <!-- ================================= -->
+
+        <section id="breads" class="products-section">
+
+            <header class="products-intro">
+                <h2>Our Fresh Breads</h2>
+
+                <p>
+                    Enjoy our delicious selection of freshly baked breads,
+                    prepared with care for your everyday meals.
+                </p>
+            </header>
+
+            <div class="products_container">
+
+                <article class="product_card">
+                    <img src="./images/bread1.jpg" alt="Classic bakery bread" loading="lazy">
+                    <h3>Classic Bread</h3>
+                    <p>Soft, freshly baked bread perfect for everyday meals.</p>
+                    <span>Ksh 1,499</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+                <article class="product_card">
+                    <img src="./images/bread1.jpg" alt="Fresh loaf of bread" loading="lazy">
+                    <h3>Fresh Loaf</h3>
+                    <p>A delicious loaf baked with care for your family.</p>
+                    <span>Ksh 1,299</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+                <article class="product_card">
+                    <img src="./images/bread2.jpg" alt="Bakery bread selection" loading="lazy">
+                    <h3>Bakery Bread</h3>
+                    <p>Enjoy a freshly baked loaf with a soft, tasty texture.</p>
+                    <span>Ksh 1,399</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+                <article class="product_card">
+                    <img src="./images/bread3.jpg" alt="Freshly baked bread" loading="lazy">
+                    <h3>Special Bread</h3>
+                    <p>A satisfying bakery favourite made for sharing.</p>
+                    <span>Ksh 799</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+                <article class="product_card">
+                    <img src="./images/bread5.jpg" alt="Fresh loaf of bread" loading="lazy">
+                    <h3>Fresh Loaf</h3>
+                    <p>A delicious loaf baked with care for your family.</p>
+                    <span>Ksh 1,299</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+                <article class="product_card">
+                    <img src="./images/bread8.jpg" alt="Fresh bakery bread" loading="lazy">
+                    <h3>Classic Bread</h3>
+                    <p>Soft, freshly baked bread perfect for everyday meals.</p>
+                    <span>Ksh 1,499</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================= -->
+        <!-- CROISSANTS SECTION -->
+        <!-- ================================= -->
+
+        <section id="croissants" class="products-section">
+
+            <header class="products-intro">
+                <h2>Our Croissants</h2>
+
+                <p>
+                    Discover our delicious collection of freshly baked croissants.
+                    Enjoy their golden, crispy exterior and soft, buttery layers.
+                </p>
+            </header>
+
+            <div class="products_container">
+
+                <article class="product_card">
+                    <img src="./images/croissant1.jpg" alt="Golden butter croissant" loading="lazy">
+                    <h3>Butter Croissant</h3>
+                    <p>A flaky, golden pastry perfect for breakfast.</p>
+                    <span>Ksh 999</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+                <article class="product_card">
+                    <img src="./images/croissant2.jpg" alt="Classic freshly baked croissant" loading="lazy">
+                    <h3>Classic Croissant</h3>
+                    <p>A light, crisp pastry to enjoy with your favourite drink.</p>
+                    <span>Ksh 1599</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+                <article class="product_card">
+                    <img src="./images/croissant3.jpg" alt="Golden butter croissant" loading="lazy">
+                    <h3>Butter Croissant</h3>
+                    <p>A flaky, golden pastry perfect for breakfast.</p>
+                    <span>Ksh 999</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+                <article class="product_card">
+                    <img src="./images/croissant4.jpg" alt="Classic freshly baked croissant" loading="lazy">
+                    <h3>Classic Croissant</h3>
+                    <p>A light, crisp pastry to enjoy with your favourite drink.</p>
+                    <span>Ksh 1599</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+                <article class="product_card">
+                    <img src="./images/croissant5.jpg" alt="Golden butter croissant" loading="lazy">
+                    <h3>Butter Croissant</h3>
+                    <p>A flaky, golden pastry perfect for breakfast.</p>
+                    <span>Ksh 999</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+                <article class="product_card">
+                    <img src="./images/croissant6.jpg" alt="Classic freshly baked croissant" loading="lazy">
+                    <h3>Classic Croissant</h3>
+                    <p>A light, crisp pastry to enjoy with your favourite drink.</p>
+                    <span>Ksh 1599</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================= -->
+        <!-- CHOCOLATES SECTION -->
+        <!-- ================================= -->
+
+        <section id="chocolates" class="products-section">
+
+            <header class="products-intro">
+                <h2>Our Chocolates</h2>
+
+                <p>
+                    Discover our delicious selection of chocolate treats,
+                    carefully prepared to satisfy your sweet cravings.
+                </p>
+            </header>
+
+            <div class="products_container">
+
+                <article class="product_card">
+                    <img src="./images/chocolate1.jpg" alt="Chocolate product 1" loading="lazy">
+                    <h3>Chocolate Treat 1</h3>
+                    <p>A delicious chocolate treat made for chocolate lovers.</p>
+                    <span>Ksh 999</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+                <article class="product_card">
+                    <img src="./images/chocolate2.jpg" alt="Chocolate product 2" loading="lazy">
+                    <h3>Chocolate Treat 2</h3>
+                    <p>Enjoy a rich and delightful chocolate experience.</p>
+                    <span>Ksh 999</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+                <article class="product_card">
+                    <img src="./images/chocolate3.jpg" alt="Chocolate product 3" loading="lazy">
+                    <h3>Chocolate Treat 3</h3>
+                    <p>A sweet and delicious chocolate creation.</p>
+                    <span>Ksh 999</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+                <article class="product_card">
+                    <img src="./images/chocolate4.jpg" alt="Chocolate product 4" loading="lazy">
+                    <h3>Chocolate Treat 4</h3>
+                    <p>A delightful chocolate treat for every occasion.</p>
+                    <span>Ksh 999</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+                <article class="product_card">
+                    <img src="./images/chocolate5.jpg" alt="Chocolate product 5" loading="lazy">
+                    <h3>Chocolate Treat 5</h3>
+                    <p>Experience the delicious taste of chocolate.</p>
+                    <span>Ksh 999</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+                <article class="product_card">
+                    <img src="./images/chocolate6.jpg" alt="Chocolate product 6" loading="lazy">
+                    <h3>Chocolate Treat 6</h3>
+                    <p>A tasty chocolate creation made for you.</p>
+                    <span>Ksh 999</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================= -->
+        <!-- CAKES SECTION -->
+        <!-- ================================= -->
+
+        <section id="cakes" class="products-section">
+
+            <header class="products-intro">
+                <h2>Our Delicious Cakes</h2>
+
+                <p>
+                    Discover our beautiful collection of freshly baked cakes,
+                    perfect for birthdays, celebrations and special occasions.
+                </p>
+            </header>
+
+            <div class="products_container">
+
+                <article class="product_card">
+                    <img src="./images/cake2.jpg" alt="Celebration cake" loading="lazy">
+                    <h3>Celebration Cake</h3>
+                    <p>A delightful cake for birthdays and special occasions.</p>
+                    <span>Ksh 2,999</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+                <article class="product_card">
+                    <img src="./images/cake2.jpg" alt="Special decorated cake" loading="lazy">
+                    <h3>Special Cake</h3>
+                    <p>A sweet treat to make your special moments memorable.</p>
+                    <span>Ksh 2,599</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+                <article class="product_card">
+                    <img src="./images/cakes3.jpg" alt="Decorated cake" loading="lazy">
+                    <h3>Decorated Cake</h3>
+                    <p>A beautifully presented cake for sharing and celebrating.</p>
+                    <span>Ksh 2,799</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+                <article class="product_card">
+                    <img src="./images/cake6.jpg" alt="Decorated cake" loading="lazy">
+                    <h3>Decorated Cake</h3>
+                    <p>A beautifully presented cake for sharing and celebrating.</p>
+                    <span>Ksh 2,199</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+                <article class="product_card">
+                    <img src="./images/cake7.jpg" alt="Decorated cake" loading="lazy">
+                    <h3>Decorated Cake</h3>
+                    <p>A beautifully presented cake for sharing and celebrating.</p>
+                    <span>Ksh 2,899</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+                <article class="product_card">
+                    <img src="./images/cake8.jpg" alt="Decorated cake" loading="lazy">
+                    <h3>Decorated Cake</h3>
+                    <p>A beautifully presented cake for sharing and celebrating.</p>
+                    <span>Ksh 1,499</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================= -->
+        <!-- BISCUITS AND COOKIES SECTION -->
+        <!-- ================================= -->
+
+        <section id="biscuits-cookies" class="products-section">
+
+            <header class="products-intro">
+                <h2>Our Biscuits and Cookies</h2>
+
+                <p>
+                    Discover our delicious selection of freshly baked
+                    biscuits and cookies, perfect for snacks and
+                    special moments.
+                </p>
+            </header>
+
+            <div class="products_container">
+
+                <article class="product_card">
+                    <img src="./images/biscuit1.jpg" alt="Butter biscuits" loading="lazy">
+                    <h3>Butter Biscuits</h3>
+                    <span>Ksh 999</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+                <article class="product_card">
+                    <img src="./images/biscuit2.jpg" alt="Classic cookies" loading="lazy">
+                    <h3>Classic Cookies</h3>
+                    <span>Ksh 999</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+                <article class="product_card">
+                    <img src="./images/biscuit3.jpg" alt="Sweet biscuits" loading="lazy">
+                    <h3>Sweet Biscuits</h3>
+                    <span>Ksh 999</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+                <article class="product_card">
+                    <img src="./images/biscuit4.jpg" alt="Classic cookies" loading="lazy">
+                    <h3>Classic Cookies</h3>
+                    <span>Ksh 999</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+                <article class="product_card">
+                    <img src="./images/biscuit5.jpg" alt="Butter biscuits" loading="lazy">
+                    <h3>Butter Biscuits</h3>
+                    <span>Ksh 999</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+                <article class="product_card">
+                    <img src="./images/biscuit6.jpg" alt="Sweet cookies" loading="lazy">
+                    <h3>Sweet Cookies</h3>
+                    <span>Ksh 999</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================= -->
+        <!-- SANDWICHES SECTION -->
+        <!-- ================================= -->
+
+        <section id="sandwiches" class="products-section">
+
+            <header class="products-intro">
+                <h2>Our Sandwiches</h2>
+
+                <p>
+                    Explore our delicious selection of freshly prepared sandwiches.
+                    Perfect for breakfast, lunch or a quick snack.
+                </p>
+            </header>
+
+            <div class="products_container">
+
+                <article class="product_card">
+                    <img src="./images/sandwich1.jpg" alt="Freshly prepared sandwich" loading="lazy">
+                    <h3>Butter Sandwich</h3>
+                    <p>A delicious sandwich prepared for a satisfying meal.</p>
+                    <span>Ksh 999</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+                <article class="product_card">
+                    <img src="./images/sandwich2.jpg" alt="Fresh sandwich" loading="lazy">
+                    <h3>Classic Sandwich</h3>
+                    <p>A tasty sandwich, perfect for enjoying with your favourite drink.</p>
+                    <span>Ksh 1599</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+                <article class="product_card">
+                    <img src="./images/sandwich3.jpg" alt="Freshly prepared sandwich" loading="lazy">
+                    <h3>Butter Sandwich</h3>
+                    <p>A delicious sandwich prepared for a satisfying meal.</p>
+                    <span>Ksh 999</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+                <article class="product_card">
+                    <img src="./images/sandwich4.jpg" alt="Fresh sandwich" loading="lazy">
+                    <h3>Classic Sandwich</h3>
+                    <p>A tasty sandwich, perfect for enjoying with your favourite drink.</p>
+                    <span>Ksh 1599</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+                <article class="product_card">
+                    <img src="./images/sandwich5.png" alt="Freshly prepared sandwich" loading="lazy">
+                    <h3>Butter Sandwich</h3>
+                    <p>A delicious sandwich prepared for a satisfying meal.</p>
+                    <span>Ksh 999</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+                <article class="product_card">
+                    <img src="./images/sandwich6.jpg" alt="Fresh sandwich" loading="lazy">
+                    <h3>Classic Sandwich</h3>
+                    <p>A tasty sandwich, perfect for enjoying with your favourite drink.</p>
+                    <span>Ksh 1599</span>
+                    <button type="button">Add to Cart</button>
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Peter's Bakery. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>

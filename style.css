@@ -1,7 +1,30 @@
 
-/* =====================================
-   GENERAL STYLES
-===================================== */
+/* =========================================================
+   PETER'S BAKERY
+   COMPLETE WEBSITE STYLESHEET
+   ========================================================= */
+
+
+/* =========================================================
+   1. COLOUR PALETTE AND GENERAL STYLES
+   ========================================================= */
+
+:root {
+    --dark-chocolate: #211713;
+    --deep-brown: #4B2E23;
+    --cream: #FFF8EF;
+    --caramel: #D99A56;
+    --caramel-dark: #B97935;
+    --gold-light: #F4C98A;
+    --beige: #F2E4D3;
+    --pale-beige: #E8D8C8;
+
+    --text-dark: #3B2922;
+    --text-medium: #66554B;
+    --text-light: #FFFFFF;
+}
+
+/* Reset */
 
 * {
     margin: 0;
@@ -11,31 +34,52 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #fffaf3;
-    color: #603b2a;
+    background-color: var(--cream);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    transition: color 0.3s ease,
+                background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
 }
 
 
-/* =====================================
-   NAVIGATION BAR
-===================================== */
+/* =========================================================
+   2. NAVIGATION BAR
+   ========================================================= */
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 25px;
+
     padding: 20px 8%;
-    background-color: #fff8ef;
+
+    background-color: var(--deep-brown);
 
     position: sticky;
     top: 0;
     z-index: 1000;
 
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Bakery Logo */
@@ -43,44 +87,49 @@ body {
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #603b2a;
+    color: var(--text-light);
     text-decoration: none;
+    white-space: nowrap;
+}
+
+.logo:hover {
+    color: var(--gold-light);
 }
 
 /* Navigation Links */
 
 .nav-links {
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 25px;
+
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: #603b2a;
+    color: var(--text-light);
     font-size: 16px;
     font-weight: bold;
-    transition: color 0.3s ease;
+    text-decoration: none;
 }
 
-/* Navigation Hover Effect */
-
-.nav-links a:hover {
-    color: #d18b47;
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--gold-light);
 }
 
 
-/* =====================================
-   HOME SECTION
-===================================== */
+/* =========================================================
+   3. HOME SECTION
+   ========================================================= */
 
 #home {
     position: relative;
+
     min-height: 85vh;
     padding: 60px 8%;
-    box-sizing: border-box;
 
     display: flex;
     justify-content: center;
@@ -88,7 +137,7 @@ body {
 
     overflow: hidden;
 
-    color: white;
+    color: var(--text-light);
     text-align: center;
 }
 
@@ -112,14 +161,11 @@ body {
 
 #home::before {
     content: "";
+
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
 
-    width: 100%;
-    height: 100%;
-
-    background-color: rgba(0, 0, 0, 0.50);
+    background-color: rgba(0, 0, 0, 0.55);
 
     z-index: 1;
 }
@@ -140,16 +186,20 @@ body {
     font-size: 15px;
     font-weight: bold;
     letter-spacing: 3px;
-    color: #f4c98a;
+
+    color: var(--gold-light);
+
     margin-bottom: 20px;
-    line-height: 1.5;
 }
 
 /* Main Heading */
 
 #home h1 {
     font-size: 42px;
-    color: white;
+    line-height: 1.2;
+
+    color: var(--text-light);
+
     margin-bottom: 15px;
 
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
@@ -159,7 +209,8 @@ body {
 
 #home h2 {
     font-size: 26px;
-    color: #f4c98a;
+    color: var(--gold-light);
+
     margin: 20px 0;
 }
 
@@ -168,9 +219,11 @@ body {
 #home .home-content > p:not(.welcome-text):not(.home-slogan) {
     max-width: 800px;
     margin: 15px auto;
+
     font-size: 18px;
     line-height: 1.8;
-    color: white;
+
+    color: var(--text-light);
 }
 
 /* Home Buttons Container */
@@ -183,6 +236,7 @@ body {
 
 .home-buttons a {
     display: inline-block;
+
     padding: 14px 28px;
     margin: 5px;
 
@@ -203,66 +257,73 @@ body {
 /* Explore Menu Button */
 
 .menu-button {
-    background-color: #d18b47;
-    color: white;
+    background-color: var(--caramel);
+    color: var(--dark-chocolate);
 }
 
 .menu-button:hover {
-    background-color: #8b4513;
+    background-color: var(--caramel-dark);
 }
 
 /* Contact Button */
 
 .contact-button {
     background-color: transparent;
-    color: white;
-    border: 2px solid white;
+    color: var(--text-light);
+
+    border: 2px solid var(--text-light);
 }
 
 .contact-button:hover {
-    background-color: #8b4513;
+    background-color: var(--deep-brown);
 }
 
 /* Closing Slogan */
 
 #home .home-slogan {
     margin-top: 30px;
+
     font-size: 18px;
     font-style: italic;
-    color: #f4c98a;
+
+    color: var(--gold-light);
 }
 
 
-/* =====================================
-   CATEGORIES SECTION
-===================================== */
+/* =========================================================
+   4. CATEGORIES SECTION
+   ========================================================= */
 
 #categories_section {
     padding: 60px 5%;
-    background-color: #fffaf3;
-    color: #603b2a;
+
+    background-color: var(--dark-chocolate);
+    color: var(--text-light);
 }
 
 /* Categories Heading */
 
 #categories_section > h2 {
     text-align: center;
+
     font-size: 34px;
-    color: #6b351c;
+    color: var(--text-light);
+
     margin-bottom: 12px;
 }
 
 /* Categories Introduction */
 
 .categories-intro {
-    text-align: center;
-    font-size: 18px;
-    color: #777;
-
-    line-height: 1.6;
-
     max-width: 800px;
     margin: 0 auto 35px;
+
+    text-align: center;
+
+    font-size: 18px;
+    line-height: 1.6;
+
+    color: var(--pale-beige);
 }
 
 /* Categories Container */
@@ -270,6 +331,7 @@ body {
 .categories-container {
     display: flex;
     flex-wrap: wrap;
+
     justify-content: center;
     align-items: stretch;
 
@@ -285,9 +347,10 @@ body {
     width: 300px;
     box-sizing: border-box;
 
-    background-color: white;
+    background-color: var(--cream);
+    color: var(--deep-brown);
 
-    border: 1px solid #f0dfcc;
+    border: 1px solid var(--pale-beige);
     border-radius: 15px;
 
     padding: 12px;
@@ -319,7 +382,8 @@ body {
 /* Category Name */
 
 .category-card h3 {
-    color: #6b351c;
+    color: var(--deep-brown);
+
     font-size: 21px;
     margin: 15px 0 8px;
 }
@@ -327,9 +391,11 @@ body {
 /* Category Description */
 
 .category-card p {
-    color: #666;
+    color: var(--text-medium);
+
     font-size: 14px;
     line-height: 1.6;
+
     margin-bottom: 15px;
 }
 
@@ -337,12 +403,12 @@ body {
 
 .category-button {
     display: inline-block;
-
     width: 100%;
+
     padding: 12px;
 
-    background-color: #8b4513;
-    color: white;
+    background-color: var(--caramel);
+    color: var(--dark-chocolate);
 
     text-decoration: none;
     font-size: 16px;
@@ -353,10 +419,8 @@ body {
     transition: background-color 0.3s ease;
 }
 
-/* Category Button Hover */
-
 .category-button:hover {
-    background-color: #c07838;
+    background-color: var(--caramel-dark);
 }
 
 /* Category Card Hover */
@@ -379,8 +443,8 @@ body {
 
     padding: 14px 28px;
 
-    background-color: #d18b47;
-    color: white;
+    background-color: var(--caramel);
+    color: var(--dark-chocolate);
 
     text-decoration: none;
     font-size: 17px;
@@ -392,56 +456,89 @@ body {
 }
 
 .all-products-button a:hover {
-    background-color: #8b4513;
+    background-color: var(--caramel-dark);
 }
 
 
-/* =====================================
-   PRODUCTS SECTION
-   For products.html
-===================================== */
+/* =========================================================
+   5. PRODUCTS SECTION
+   For products.html and category pages
+   ========================================================= */
 
-#products_section {
+#products_section,
+.products-section {
     padding: 60px 5%;
-    background-color: #fffaf3;
-    color: #603b2a;
+
+    background-color: var(--dark-chocolate);
+    color: var(--cream);
 }
 
-#products_section h2 {
+/* Product Section Headings */
+
+#products_section h1,
+#products_section h2,
+.products-section h1,
+.products-section h2 {
     text-align: center;
+
     font-size: 34px;
-    color: #6b351c;
+    line-height: 1.3;
+
+    color: var(--text-light);
+
     margin: 0 0 12px;
     font-weight: bold;
 }
 
-#products_section > p {
+/* Product Introduction */
+
+.products-intro {
+    max-width: 850px;
+    margin: 0 auto 35px;
+
     text-align: center;
-    font-size: 18px;
-    color: #777;
-    line-height: 1.6;
-    margin: 0 0 35px;
 }
+
+.products-intro p {
+    font-size: 18px;
+    line-height: 1.6;
+
+    color: var(--pale-beige);
+}
+
+/* Products Container */
 
 .products_container {
     display: flex;
     flex-wrap: wrap;
+
     justify-content: center;
     align-items: stretch;
+
     gap: 30px;
+
     max-width: 1400px;
     margin: 0 auto;
 }
 
+/* Individual Product Card */
+
 .product_card {
     width: 300px;
     box-sizing: border-box;
-    background-color: #ffffff;
-    border: 1px solid #f0dfcc;
+
+    background-color: var(--cream);
+    color: var(--deep-brown);
+
+    border: 1px solid var(--pale-beige);
     border-radius: 15px;
+
     padding: 12px;
+
     text-align: center;
+
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
     overflow: hidden;
 
     transition: transform 0.3s ease,
@@ -450,171 +547,320 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* Product Image */
+
 .product_card img {
     display: block;
+
     width: 100%;
     height: 240px;
+
     object-fit: cover;
     object-position: center;
+
     border-radius: 10px;
 }
 
+/* Product Name */
+
 .product_card h3 {
-    color: #6b351c;
+    color: var(--deep-brown);
+
     font-size: 21px;
     margin: 15px 0 8px;
 }
 
+/* Product Description */
+
 .product_card p {
-    color: #666;
+    color: var(--text-medium);
+
     font-size: 14px;
     line-height: 1.6;
+
     margin: 0 0 15px;
 }
 
+/* Product Price */
+
 .product_card span {
     display: block;
-    color: #a0522d;
+
+    color: #A66A32;
+
     font-size: 20px;
     font-weight: bold;
+
     margin-bottom: 15px;
 }
+
+/* Add to Cart Button */
 
 .product_card button {
     width: 100%;
     padding: 12px;
-    background-color: #8b4513;
-    color: white;
+
+    background-color: var(--caramel);
+    color: var(--dark-chocolate);
+
     border: none;
     border-radius: 8px;
+
     font-size: 16px;
     font-weight: bold;
+
     cursor: pointer;
 
     transition: background-color 0.3s ease;
 }
 
 .product_card button:hover {
-    background-color: #c07838;
+    background-color: var(--caramel-dark);
 }
+
+/* Product Card Hover */
 
 .product_card:hover {
     transform: translateY(-5px);
+
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
 }
 
 
-/* =====================================
-   ABOUT US SECTION
+/* =========================================================
+   6. ABOUT US PAGE
    For about_us.html
-===================================== */
+   ========================================================= */
 
-#about_us {
-    padding: 60px 8%;
-    background-color: #fffaf3;
-    color: #603b2a;
+/* About Hero */
+
+.about-hero {
+    padding: 65px 8%;
+
+    background-color: var(--dark-chocolate);
+    color: var(--text-light);
+
     text-align: center;
 }
 
-#about_us h2 {
-    font-size: 34px;
-    color: #6b351c;
-    margin-bottom: 25px;
+.about-hero h1 {
+    font-size: 38px;
+    color: var(--text-light);
+
+    margin-bottom: 10px;
 }
 
+.about-hero p {
+    font-size: 18px;
+    font-style: italic;
+
+    color: var(--gold-light);
+}
+
+/* Main About Section */
+
+#about_us {
+    padding: 65px 8%;
+
+    background-color: var(--cream);
+    color: var(--text-dark);
+
+    text-align: center;
+}
+
+/* Introduction Container */
+
+.about-introduction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 45px;
+
+    max-width: 1200px;
+    margin: 0 auto 55px;
+}
+
+/* About Image */
+
+.about-image {
+    flex: 1;
+    min-width: 0;
+}
+
+.about-image img {
+    display: block;
+
+    width: 100%;
+    height: 350px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Introduction Text */
+
 #about_us .about-intro {
-    max-width: 850px;
-    margin: 0 auto 35px;
+    flex: 1;
+    min-width: 0;
+
+    margin: 0;
+
+    text-align: left;
+
     font-size: 17px;
     line-height: 1.9;
-    color: #604b40;
+
+    color: var(--text-medium);
 }
+
+.about-intro p {
+    margin-bottom: 18px;
+}
+
+/* Mission and Why Choose Us Container */
+
+.about-features {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 30px;
+
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Mission and Why Choose Us Cards */
 
 #about_us .about-mission,
 #about_us .about-why {
-    max-width: 850px;
-    margin: 30px auto;
-    padding: 25px;
-    background-color: #f5e6d3;
-    border-radius: 12px;
+    flex: 1;
+
+    max-width: none;
+    margin: 0;
+
+    padding: 30px;
+
+    background-color: var(--beige);
+
+    border: 1px solid var(--pale-beige);
+    border-radius: 15px;
+
     text-align: center;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
+
+/* About Subheadings */
 
 #about_us h3 {
     font-size: 25px;
-    color: #a0522d;
-    margin-top: 0;
-    margin-bottom: 15px;
+
+    color: var(--deep-brown);
+
+    margin: 0 0 18px;
 }
+
+/* Mission Paragraph */
 
 #about_us .about-mission p {
     max-width: 750px;
     margin: 0 auto;
+
     font-size: 17px;
     line-height: 1.8;
-    color: #604b40;
+
+    color: var(--text-medium);
 }
 
-#about_us ul {
+/* Why Choose Us List */
+
+#about_us .about-why ul {
     max-width: 750px;
-    margin: 20px auto 0;
-    padding-left: 25px;
+
+    margin: 0 auto;
+    padding-left: 22px;
+
     text-align: left;
 }
 
-#about_us li {
+#about_us .about-why li {
     font-size: 16px;
     line-height: 1.8;
+
     margin-bottom: 12px;
-    color: #604b40;
+
+    color: var(--text-medium);
 }
 
-#about_us li strong {
-    color: #6b351c;
+#about_us .about-why li strong {
+    color: var(--deep-brown);
 }
+
+/* Closing Message */
 
 #about_us .about-closing {
     max-width: 800px;
-    margin: 35px auto 0;
+
+    margin: 45px auto 0;
+
     font-size: 18px;
     font-style: italic;
     line-height: 1.8;
-    color: #6b351c;
+
+    color: #A66A32;
 }
 
 
-/* =====================================
-   CONTACT SECTION
-===================================== */
+/* =========================================================
+   7. CONTACT SECTION
+   ========================================================= */
 
 #contact {
     padding: 60px 8%;
-    background-color: #f5e6d3;
-    color: #603b2a;
+
+    background-color: var(--dark-chocolate);
+    color: var(--text-light);
+
     text-align: center;
 }
 
+/* Contact Heading */
+
 #contact h2 {
     font-size: 34px;
-    color: #6b351c;
+    color: var(--text-light);
+
     margin-bottom: 20px;
 }
+
+/* Contact Introduction */
 
 #contact .contact-intro {
     max-width: 800px;
     margin: 0 auto 35px;
+
     font-size: 17px;
     line-height: 1.8;
-    color: #604b40;
+
+    color: var(--pale-beige);
 }
 
 /* Contact Container */
 
 .contact-container {
     display: flex;
+
     justify-content: center;
     align-items: stretch;
+
     gap: 30px;
+
     max-width: 900px;
     margin: 0 auto;
 }
@@ -624,9 +870,14 @@ body {
 .contact-info,
 .opening-hours {
     flex: 1;
+
     padding: 25px;
-    background-color: #fffaf3;
+
+    background-color: var(--cream);
+    color: var(--text-dark);
+
     border-radius: 12px;
+
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
 }
 
@@ -634,7 +885,8 @@ body {
 
 #contact h3 {
     font-size: 24px;
-    color: #a0522d;
+    color: var(--deep-brown);
+
     margin-top: 0;
     margin-bottom: 20px;
 }
@@ -644,7 +896,8 @@ body {
 #contact p {
     font-size: 16px;
     line-height: 1.8;
-    color: #604b40;
+
+    color: var(--text-medium);
 }
 
 /* Contact Details */
@@ -656,12 +909,12 @@ body {
 /* Clickable Contact Links */
 
 #contact a {
-    color: #8b4513;
+    color: #A66A32;
     text-decoration: none;
 }
 
 #contact a:hover {
-    color: #d18b47;
+    color: var(--caramel-dark);
     text-decoration: underline;
 }
 
@@ -669,20 +922,24 @@ body {
 
 #contact .contact-message {
     margin: 35px auto 0;
+
     font-size: 17px;
     font-style: italic;
-    color: #6b351c;
+
+    color: var(--gold-light);
 }
 
 
-/* =====================================
-   FOOTER
-===================================== */
+/* =========================================================
+   8. FOOTER
+   ========================================================= */
 
 .footer {
     padding: 22px 8%;
-    background-color: #603b2a;
-    color: white;
+
+    background-color: var(--dark-chocolate);
+    color: var(--text-light);
+
     text-align: center;
 }
 
@@ -691,11 +948,21 @@ body {
     line-height: 1.6;
 }
 
+.footer a {
+    color: var(--caramel);
+    text-decoration: none;
+}
 
-/* =====================================
-   RESPONSIVE DESIGN
+.footer a:hover {
+    color: var(--text-light);
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   9. RESPONSIVE DESIGN
    For tablets and mobile phones
-===================================== */
+   ========================================================= */
 
 @media (max-width: 768px) {
 
@@ -704,12 +971,14 @@ body {
     .navbar {
         flex-direction: column;
         gap: 18px;
+
         padding: 18px 5%;
     }
 
     .nav-links {
         flex-wrap: wrap;
         justify-content: center;
+
         gap: 15px;
     }
 
@@ -758,7 +1027,78 @@ body {
     }
 
 
+    /* Products */
+
+    #products_section,
+    .products-section {
+        padding: 45px 5%;
+    }
+
+    #products_section h1,
+    #products_section h2,
+    .products-section h1,
+    .products-section h2 {
+        font-size: 28px;
+    }
+
+    .products_container {
+        gap: 20px;
+    }
+
+    .product_card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+
+    /* About Us */
+
+    .about-hero {
+        padding: 50px 5%;
+    }
+
+    .about-hero h1 {
+        font-size: 32px;
+    }
+
+    #about_us {
+        padding: 45px 5%;
+    }
+
+    .about-introduction {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .about-image,
+    #about_us .about-intro {
+        width: 100%;
+    }
+
+    .about-image img {
+        height: 280px;
+    }
+
+    #about_us .about-intro {
+        text-align: center;
+    }
+
+    .about-features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about_us .about-mission,
+    #about_us .about-why {
+        width: 100%;
+    }
+
+
     /* Contact */
+
+    #contact {
+        padding: 45px 5%;
+    }
 
     .contact-container {
         flex-direction: column;
@@ -774,7 +1114,13 @@ body {
 }
 
 
+/* =========================================================
+   10. SMALL MOBILE SCREENS
+   ========================================================= */
+
 @media (max-width: 480px) {
+
+    /* Navigation */
 
     .logo {
         font-size: 22px;
@@ -783,6 +1129,9 @@ body {
     .nav-links {
         gap: 12px;
     }
+
+
+    /* Home */
 
     #home h1 {
         font-size: 27px;
@@ -802,6 +1151,9 @@ body {
         font-size: 15px;
     }
 
+
+    /* Categories */
+
     #categories_section > h2 {
         font-size: 25px;
     }
@@ -810,8 +1162,65 @@ body {
         height: 200px;
     }
 
+
+    /* Products */
+
+    #products_section h1,
+    #products_section h2,
+    .products-section h1,
+    .products-section h2 {
+        font-size: 25px;
+    }
+
+    .product_card img {
+        height: 210px;
+    }
+
+
+    /* About Us */
+
+    .about-hero h1 {
+        font-size: 27px;
+    }
+
+    .about-hero p {
+        font-size: 16px;
+    }
+
+    .about-image img {
+        height: 220px;
+    }
+
+    #about_us h3 {
+        font-size: 21px;
+    }
+
+    #about_us .about-mission,
+    #about_us .about-why {
+        padding: 22px;
+    }
+
+    #about_us .about-closing {
+        font-size: 16px;
+    }
+
+
+    /* Contact */
+
     #contact h2 {
         font-size: 28px;
+    }
+
+    .contact-info,
+    .opening-hours {
+        padding: 20px;
+    }
+
+
+    /* Footer */
+
+    .footer {
+        padding: 20px 5%;
     }
 
 }

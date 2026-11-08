@@ -6,7 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Peter's Bakery</title>
+    <meta name="description" content="Welcome to Peter's Bakery. Discover freshly baked cakes, bread, croissants, sandwiches, biscuits and chocolates.">
+
+    <title>Peter's Bakery | Freshly Baked Happiness</title>
 
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -14,18 +16,36 @@
 <body>
 
     <!-- Navigation Bar -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main navigation">
 
         <a href="./index.html" class="logo">
             Peter's Bakery
         </a>
 
         <ul class="nav-links">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./products.html">Our Products</a></li>
-            <li><a href="./about_us.html">About Us</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="./my_order.html">My Order</a></li>
+
+            <li>
+                <a href="./index.html" class="active" aria-current="page">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="./products.html">Our Products</a>
+            </li>
+
+            <li>
+                <a href="./about_us.html">About Us</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+            <li>
+                <a href="./my_order.html">My Order</a>
+            </li>
+
         </ul>
 
     </nav>
@@ -37,25 +57,41 @@
         <section id="home">
 
             <!-- Background Video -->
-            <video autoplay muted loop playsinline class="background-video">
+            <video
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                class="background-video"
+                aria-hidden="true"
+                tabindex="-1"
+            >
 
-                <source src="./videos/background-video.mp4"
-                        type="video/mp4">
+                <source
+                    src="./videos/background-video.mp4"
+                    type="video/mp4"
+                >
 
                 Your browser does not support the video element.
 
             </video>
 
-            <!-- Dark Overlay and Home Content -->
+
+            <!-- Home Content -->
             <div class="home-content">
 
                 <p class="welcome-text">
                     WELCOME TO PETER'S BAKERY
                 </p>
 
-                <h1>Freshly Baked Happiness, Every Day.</h1>
+                <h1>
+                    Freshly Baked Happiness, Every Day.
+                </h1>
 
-                <h2>Freshly Baked, Made with Love</h2>
+                <h2>
+                    Freshly Baked, Made with Love
+                </h2>
 
                 <p>
                     Discover delicious cakes, freshly baked bread,
@@ -69,6 +105,8 @@
                     the perfect treat for you.
                 </p>
 
+
+                <!-- Home Buttons -->
                 <div class="home-buttons">
 
                     <a href="#categories_section" class="menu-button">
@@ -80,6 +118,7 @@
                     </a>
 
                 </div>
+
 
                 <p class="home-slogan">
                     Your happiness is our favorite recipe.
@@ -93,20 +132,30 @@
         <!-- PRODUCT CATEGORIES SECTION -->
         <section id="categories_section">
 
-            <h2>Explore Our Categories</h2>
+            <header class="categories-heading">
 
-            <p class="categories-intro">
-                Discover our delicious selection of freshly prepared
-                bakery products. Choose a category to explore more.
-            </p>
+                <h2>Explore Our Categories</h2>
 
+                <p class="categories-intro">
+                    Discover our delicious selection of freshly prepared
+                    bakery products. Choose a category to explore more.
+                </p>
+
+            </header>
+
+
+            <!-- Categories Container -->
             <div class="categories-container">
 
-                <!-- Cakes -->
-                <div class="category-card">
 
-                    <img src="./images/cake5.jpg"
-                         alt="Delicious decorated cakes">
+                <!-- Cakes -->
+                <article class="category-card">
+
+                    <img
+                        src="./images/cake5.jpg"
+                        alt="Decorated bakery cakes"
+                        loading="lazy"
+                    >
 
                     <h3>Cakes</h3>
 
@@ -119,14 +168,17 @@
                         See More
                     </a>
 
-                </div>
+                </article>
 
 
                 <!-- Croissants -->
-                <div class="category-card">
+                <article class="category-card">
 
-                    <img src="./images/croissant5.jpg"
-                         alt="Freshly baked croissants">
+                    <img
+                        src="./images/croissant5.jpg"
+                        alt="Freshly baked croissants"
+                        loading="lazy"
+                    >
 
                     <h3>Croissants</h3>
 
@@ -139,14 +191,17 @@
                         See More
                     </a>
 
-                </div>
+                </article>
 
 
                 <!-- Sandwiches -->
-                <div class="category-card">
+                <article class="category-card">
 
-                    <img src="./images/sandwich5.png"
-                         alt="Fresh sandwiches">
+                    <img
+                        src="./images/sandwich5.png"
+                        alt="Fresh bakery sandwiches"
+                        loading="lazy"
+                    >
 
                     <h3>Sandwiches</h3>
 
@@ -159,14 +214,17 @@
                         See More
                     </a>
 
-                </div>
+                </article>
 
 
                 <!-- Bread -->
-                <div class="category-card">
+                <article class="category-card">
 
-                    <img src="./images/bread5.jpg"
-                         alt="Freshly baked bread">
+                    <img
+                        src="./images/bread5.jpg"
+                        alt="Freshly baked bread"
+                        loading="lazy"
+                    >
 
                     <h3>Breads</h3>
 
@@ -179,14 +237,17 @@
                         See More
                     </a>
 
-                </div>
+                </article>
 
 
                 <!-- Biscuits and Cookies -->
-                <div class="category-card">
+                <article class="category-card">
 
-                    <img src="./images/biscuit5.jpg"
-                         alt="Biscuits and cookies">
+                    <img
+                        src="./images/biscuit5.jpg"
+                        alt="Biscuits and cookies"
+                        loading="lazy"
+                    >
 
                     <h3>Biscuits and Cookies</h3>
 
@@ -195,18 +256,21 @@
                         delicious cookies for every occasion.
                     </p>
 
-                    <a href="./biscuits_cookies.htm" class="category-button">
+                    <a href="./biscuits_cookies.html" class="category-button">
                         See More
                     </a>
 
-                </div>
+                </article>
 
 
                 <!-- Chocolates -->
-                <div class="category-card">
+                <article class="category-card">
 
-                    <img src="./images/chocolate5.jpg"
-                         alt="Delicious chocolates">
+                    <img
+                        src="./images/chocolate5.jpg"
+                        alt="Delicious chocolate treats"
+                        loading="lazy"
+                    >
 
                     <h3>Chocolates</h3>
 
@@ -219,10 +283,13 @@
                         See More
                     </a>
 
-                </div>
+                </article>
+
 
             </div>
 
+
+            <!-- View All Products -->
             <div class="all-products-button">
 
                 <a href="./products.html">
@@ -237,18 +304,25 @@
         <!-- CONTACT SECTION -->
         <section id="contact">
 
-            <h2>Contact Us</h2>
+            <header class="contact-heading">
 
-            <p class="contact-intro">
-                We would love to hear from you! Whether you have
-                a question, want to place an order, or need more
-                information about our products, feel free to contact us.
-            </p>
+                <h2>Contact Us</h2>
 
+                <p class="contact-intro">
+                    We would love to hear from you! Whether you have
+                    a question, want to place an order, or need more
+                    information about our products, feel free to contact us.
+                </p>
+
+            </header>
+
+
+            <!-- Contact Container -->
             <div class="contact-container">
 
+
                 <!-- Contact Information -->
-                <div class="contact-info">
+                <article class="contact-info">
 
                     <h3>Get in Touch</h3>
 
@@ -259,6 +333,7 @@
 
                     <p>
                         <strong>Phone:</strong>
+
                         <a href="tel:+254118430802">
                             +254 118 430 802
                         </a>
@@ -266,34 +341,44 @@
 
                     <p>
                         <strong>Email:</strong>
+
                         <a href="mailto:matemberajosue1@gmail.com">
                             matemberajosue1@gmail.com
                         </a>
                     </p>
 
-                </div>
+                </article>
 
 
                 <!-- Opening Hours -->
-                <div class="opening-hours">
+                <article class="opening-hours">
 
                     <h3>Opening Hours</h3>
 
-                    <p><strong>Monday - Saturday:</strong></p>
+                    <p>
+                        <strong>Monday - Saturday:</strong>
+                    </p>
 
                     <p>8:00 AM - 7:00 PM</p>
 
-                    <p><strong>Sunday:</strong></p>
+                    <p>
+                        <strong>Sunday:</strong>
+                    </p>
 
                     <p>9:00 AM - 4:00 PM</p>
 
-                </div>
+                </article>
+
 
             </div>
 
+
+            <!-- Contact Closing Message -->
             <p class="contact-message">
+
                 Thank you for choosing Peter's Bakery.
                 We look forward to serving you!
+
             </p>
 
         </section>

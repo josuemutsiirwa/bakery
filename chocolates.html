@@ -6,7 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Chocolates - Peter's Bakery</title>
+    <meta name="description" content="Explore the delicious chocolate treats available at Peter's Bakery.">
+
+    <title>Chocolates | Peter's Bakery</title>
 
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -22,176 +24,216 @@
 
         <ul class="nav-links">
 
-            <li><a href="./index.html">Home</a></li>
+            <li>
+                <a href="./index.html">Home</a>
+            </li>
 
-            <li><a href="./products.html">Our Products</a></li>
+            <li>
+                <a href="./products.html" class="active" aria-current="page">
+                    Our Products
+                </a>
+            </li>
 
-            <li><a href="./about_us.html">About Us</a></li>
+            <li>
+                <a href="./about_us.html">About Us</a>
+            </li>
 
-            <li><a href="./index.html#contact">Contact</a></li>
+            <li>
+                <a href="./index.html#contact">Contact</a>
+            </li>
 
-            <li><a href="./my_order.html">My Order</a></li>
+            <li>
+                <a href="./my_order.html">My Order</a>
+            </li>
 
         </ul>
 
     </nav>
 
 
-    <!-- Chocolates Products Section -->
-    <section id="products_section">
+    <!-- Main Content -->
+    <main>
 
-        <h2>Our Chocolates</h2>
+        <!-- Chocolate Products Section -->
+        <section id="products_section">
 
-        <p>
-            Discover our delicious selection of chocolate treats,
-            carefully prepared to satisfy your sweet cravings.
-        </p>
+            <!-- Section Heading -->
+            <header class="products-intro">
 
-
-        <!-- Products Container -->
-        <div class="products_container">
-
-
-            <!-- Chocolate 1 -->
-            <div class="product_card">
-
-                <img src="./images/chocolate1.jpg"
-                     alt="Chocolate product">
-
-                <h3>Chocolate Treat 1</h3>
+                <h1>Our Chocolates</h1>
 
                 <p>
-                    A delicious chocolate treat made
-                    for chocolate lovers.
+                    Discover our delicious selection of chocolate treats,
+                    carefully prepared to satisfy your sweet cravings.
                 </p>
 
-                <span>Ksh 999</span>
+            </header>
 
-                <button type="button">
-                    Add to Cart
-                </button>
+
+            <!-- Products Container -->
+            <div class="products_container">
+
+
+                <!-- Chocolate 1 -->
+                <article class="product_card">
+
+                    <img
+                        src="./images/chocolate1.jpg"
+                        alt="Chocolate product 1"
+                        loading="lazy"
+                    >
+
+                    <h3>Chocolate Treat 1</h3>
+
+                    <p>
+                        A delicious chocolate treat made
+                        for chocolate lovers.
+                    </p>
+
+                    <span>Ksh 999</span>
+
+                    <button type="button">
+                        Add to Cart
+                    </button>
+
+                </article>
+
+
+                <!-- Chocolate 2 -->
+                <article class="product_card">
+
+                    <img
+                        src="./images/chocolate2.jpg"
+                        alt="Chocolate product 2"
+                        loading="lazy"
+                    >
+
+                    <h3>Chocolate Treat 2</h3>
+
+                    <p>
+                        Enjoy a rich and delightful chocolate experience.
+                    </p>
+
+                    <span>Ksh 999</span>
+
+                    <button type="button">
+                        Add to Cart
+                    </button>
+
+                </article>
+
+
+                <!-- Chocolate 3 -->
+                <article class="product_card">
+
+                    <img
+                        src="./images/chocolate3.jpg"
+                        alt="Chocolate product 3"
+                        loading="lazy"
+                    >
+
+                    <h3>Chocolate Treat 3</h3>
+
+                    <p>
+                        A sweet and delicious chocolate creation.
+                    </p>
+
+                    <span>Ksh 999</span>
+
+                    <button type="button">
+                        Add to Cart
+                    </button>
+
+                </article>
+
+
+                <!-- Chocolate 4 -->
+                <article class="product_card">
+
+                    <img
+                        src="./images/chocolate4.jpg"
+                        alt="Chocolate product 4"
+                        loading="lazy"
+                    >
+
+                    <h3>Chocolate Treat 4</h3>
+
+                    <p>
+                        A delightful chocolate treat for every occasion.
+                    </p>
+
+                    <span>Ksh 999</span>
+
+                    <button type="button">
+                        Add to Cart
+                    </button>
+
+                </article>
+
+
+                <!-- Chocolate 5 -->
+                <article class="product_card">
+
+                    <img
+                        src="./images/chocolate5.jpg"
+                        alt="Chocolate product 5"
+                        loading="lazy"
+                    >
+
+                    <h3>Chocolate Treat 5</h3>
+
+                    <p>
+                        Experience the delicious taste of chocolate.
+                    </p>
+
+                    <span>Ksh 999</span>
+
+                    <button type="button">
+                        Add to Cart
+                    </button>
+
+                </article>
+
+
+                <!-- Chocolate 6 -->
+                <article class="product_card">
+
+                    <img
+                        src="./images/chocolate6.jpg"
+                        alt="Chocolate product 6"
+                        loading="lazy"
+                    >
+
+                    <h3>Chocolate Treat 6</h3>
+
+                    <p>
+                        A tasty chocolate creation made for you.
+                    </p>
+
+                    <span>Ksh 999</span>
+
+                    <button type="button">
+                        Add to Cart
+                    </button>
+
+                </article>
+
 
             </div>
 
 
-            <!-- Chocolate 2 -->
-            <div class="product_card">
+            <!-- Back to Categories -->
+            <div class="all-products-button">
 
-                <img src="./images/chocolate2.jpg"
-                     alt="Chocolate product">
-
-                <h3>Chocolate Treat 2</h3>
-
-                <p>
-                    Enjoy a rich and delightful chocolate experience.
-                </p>
-
-                <span>Ksh 999</span>
-
-                <button type="button">
-                    Add to Cart
-                </button>
+                <a href="./index.html#categories_section">
+                    Back to Categories
+                </a>
 
             </div>
 
+        </section>
 
-            <!-- Chocolate 3 -->
-            <div class="product_card">
-
-                <img src="./images/chocolate3.jpg"
-                     alt="Chocolate product">
-
-                <h3>Chocolate Treat 3</h3>
-
-                <p>
-                    A sweet and delicious chocolate creation.
-                </p>
-
-                <span>Ksh 999</span>
-
-                <button type="button">
-                    Add to Cart
-                </button>
-
-            </div>
-
-
-            <!-- Chocolate 4 -->
-            <div class="product_card">
-
-                <img src="./images/chocolate4.jpg"
-                     alt="Chocolate product">
-
-                <h3>Chocolate Treat 4</h3>
-
-                <p>
-                    A delightful chocolate treat for every occasion.
-                </p>
-
-                <span>Ksh 999</span>
-
-                <button type="button">
-                    Add to Cart
-                </button>
-
-            </div>
-
-
-            <!-- Chocolate 5 -->
-            <div class="product_card">
-
-                <img src="./images/chocolate5.jpg"
-                     alt="Chocolate product">
-
-                <h3>Chocolate Treat 5</h3>
-
-                <p>
-                    Experience the delicious taste of chocolate.
-                </p>
-
-                <span>Ksh 999</span>
-
-                <button type="button">
-                    Add to Cart
-                </button>
-
-            </div>
-
-
-            <!-- Chocolate 6 -->
-            <div class="product_card">
-
-                <img src="./images/chocolate6.jpg"
-                     alt="Chocolate product">
-
-                <h3>Chocolate Treat 6</h3>
-
-                <p>
-                    A tasty chocolate creation made for you.
-                </p>
-
-                <span>Ksh 999</span>
-
-                <button type="button">
-                    Add to Cart
-                </button>
-
-            </div>
-
-
-        </div>
-
-
-        <!-- Back to Categories -->
-        <div class="all-products-button">
-
-            <a href="./index.html#categories_section">
-                Back to Categories
-            </a>
-
-        </div>
-
-    </section>
+    </main>
 
 
     <!-- Footer -->

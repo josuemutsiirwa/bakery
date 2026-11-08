@@ -6,7 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sandwiches - Peter's Bakery</title>
+    <meta name="description" content="Discover freshly prepared sandwiches at Peter's Bakery. Enjoy delicious sandwiches for breakfast, lunch or a quick snack.">
+
+    <title>Sandwiches | Peter's Bakery</title>
 
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -14,7 +16,7 @@
 <body>
 
     <!-- Navigation Bar -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main navigation">
 
         <a href="./index.html" class="logo">
             Peter's Bakery
@@ -22,163 +24,202 @@
 
         <ul class="nav-links">
 
-            <li><a href="./index.html">Home</a></li>
+            <li>
+                <a href="./index.html">Home</a>
+            </li>
 
-            <li><a href="./products.html">Our Products</a></li>
+            <li>
+                <a href="./products.html" class="active" aria-current="page">
+                    Our Products
+                </a>
+            </li>
 
-            <li><a href="./about_us.html">About Us</a></li>
+            <li>
+                <a href="./about_us.html">About Us</a>
+            </li>
 
-            <li><a href="./index.html#contact">Contact</a></li>
+            <li>
+                <a href="./index.html#contact">Contact</a>
+            </li>
 
-            <li><a href="./my_order.html">My Order</a></li>
+            <li>
+                <a href="./my_order.html">My Order</a>
+            </li>
 
         </ul>
 
     </nav>
 
 
-    <!-- Sandwich Products Section -->
-    <section id="products_section">
+    <main>
 
-        <h2>Our Sandwiches</h2>
+        <!-- Sandwich Products Section -->
+        <section id="products_section">
 
-        <p>
-            Explore our delicious selection of freshly prepared sandwiches.
-            Perfect for breakfast, lunch or a quick snack.
-        </p>
+            <!-- Section Introduction -->
+            <header class="products-intro">
 
-
-        <!-- Products Container -->
-        <div class="products_container">
-
-
-            <!-- Sandwich 1 -->
-            <div class="product_card">
-
-                <img src="./images/sandwich1.jpg"
-                     alt="Freshly prepared sandwich">
-
-                <h3>Butter Sandwich</h3>
+                <h1>Our Sandwiches</h1>
 
                 <p>
-                    A delicious sandwich prepared for a satisfying meal.
+                    Explore our delicious selection of freshly prepared sandwiches.
+                    Perfect for breakfast, lunch or a quick snack.
                 </p>
 
-                <span>Ksh 999</span>
+            </header>
 
-                <button type="button">Add to Cart</button>
+
+            <!-- Products Container -->
+            <div class="products_container">
+
+
+                <!-- Sandwich 1 -->
+                <article class="product_card">
+
+                    <img
+                        src="./images/sandwich1.jpg"
+                        alt="Freshly prepared sandwich"
+                        loading="lazy"
+                    >
+
+                    <h3>Butter Sandwich</h3>
+
+                    <p>
+                        A delicious sandwich prepared for a satisfying meal.
+                    </p>
+
+                    <span>Ksh 999</span>
+
+                    <button type="button">Add to Cart</button>
+
+                </article>
+
+
+                <!-- Sandwich 2 -->
+                <article class="product_card">
+
+                    <img
+                        src="./images/sandwich2.jpg"
+                        alt="Fresh sandwich"
+                        loading="lazy"
+                    >
+
+                    <h3>Classic Sandwich</h3>
+
+                    <p>
+                        A tasty sandwich, perfect for enjoying with your favourite drink.
+                    </p>
+
+                    <span>Ksh 1599</span>
+
+                    <button type="button">Add to Cart</button>
+
+                </article>
+
+
+                <!-- Sandwich 3 -->
+                <article class="product_card">
+
+                    <img
+                        src="./images/sandwich3.jpg"
+                        alt="Freshly prepared sandwich"
+                        loading="lazy"
+                    >
+
+                    <h3>Butter Sandwich</h3>
+
+                    <p>
+                        A delicious sandwich prepared for a satisfying meal.
+                    </p>
+
+                    <span>Ksh 999</span>
+
+                    <button type="button">Add to Cart</button>
+
+                </article>
+
+
+                <!-- Sandwich 4 -->
+                <article class="product_card">
+
+                    <img
+                        src="./images/sandwich4.jpg"
+                        alt="Fresh sandwich"
+                        loading="lazy"
+                    >
+
+                    <h3>Classic Sandwich</h3>
+
+                    <p>
+                        A tasty sandwich, perfect for enjoying with your favourite drink.
+                    </p>
+
+                    <span>Ksh 1599</span>
+
+                    <button type="button">Add to Cart</button>
+
+                </article>
+
+
+                <!-- Sandwich 5 -->
+                <article class="product_card">
+
+                    <img
+                        src="./images/sandwich5.png"
+                        alt="Freshly prepared sandwich"
+                        loading="lazy"
+                    >
+
+                    <h3>Butter Sandwich</h3>
+
+                    <p>
+                        A delicious sandwich prepared for a satisfying meal.
+                    </p>
+
+                    <span>Ksh 999</span>
+
+                    <button type="button">Add to Cart</button>
+
+                </article>
+
+
+                <!-- Sandwich 6 -->
+                <article class="product_card">
+
+                    <img
+                        src="./images/sandwich6.jpg"
+                        alt="Fresh sandwich"
+                        loading="lazy"
+                    >
+
+                    <h3>Classic Sandwich</h3>
+
+                    <p>
+                        A tasty sandwich, perfect for enjoying with your favourite drink.
+                    </p>
+
+                    <span>Ksh 1599</span>
+
+                    <button type="button">Add to Cart</button>
+
+                </article>
+
 
             </div>
 
 
-            <!-- Sandwich 2 -->
-            <div class="product_card">
+            <!-- Back to Categories -->
+            <div class="all-products-button">
 
-                <img src="./images/sandwich2.jpg"
-                     alt="Fresh sandwich">
-
-                <h3>Classic Sandwich</h3>
-
-                <p>
-                    A tasty sandwich, perfect for enjoying with your favourite drink.
-                </p>
-
-                <span>Ksh 1599</span>
-
-                <button type="button">Add to Cart</button>
+                <a href="./index.html#categories_section">
+                    Back to Categories
+                </a>
 
             </div>
 
+        </section>
 
-            <!-- Sandwich 3 -->
-            <div class="product_card">
-
-                <img src="./images/sandwich3.jpg"
-                     alt="Freshly prepared sandwich">
-
-                <h3>Butter Sandwich</h3>
-
-                <p>
-                    A delicious sandwich prepared for a satisfying meal.
-                </p>
-
-                <span>Ksh 999</span>
-
-                <button type="button">Add to Cart</button>
-
-            </div>
-
-
-            <!-- Sandwich 4 -->
-            <div class="product_card">
-
-                <img src="./images/sandwich4.jpg"
-                     alt="Fresh sandwich">
-
-                <h3>Classic Sandwich</h3>
-
-                <p>
-                    A tasty sandwich, perfect for enjoying with your favourite drink.
-                </p>
-
-                <span>Ksh 1599</span>
-
-                <button type="button">Add to Cart</button>
-
-            </div>
-
-
-            <!-- Sandwich 5 -->
-            <div class="product_card">
-
-                <img src="./images/sandwich5.png"
-                     alt="Freshly prepared sandwich">
-
-                <h3>Butter Sandwich</h3>
-
-                <p>
-                    A delicious sandwich prepared for a satisfying meal.
-                </p>
-
-                <span>Ksh 999</span>
-
-                <button type="button">Add to Cart</button>
-
-            </div>
-
-
-            <!-- Sandwich 6 -->
-            <div class="product_card">
-
-                <img src="./images/sandwich6.jpg"
-                     alt="Fresh sandwich">
-
-                <h3>Classic Sandwich</h3>
-
-                <p>
-                    A tasty sandwich, perfect for enjoying with your favourite drink.
-                </p>
-
-                <span>Ksh 1599</span>
-
-                <button type="button">Add to Cart</button>
-
-            </div>
-
-
-        </div>
-
-
-        <!-- Back to Categories -->
-        <div class="all-products-button">
-
-            <a href="./index.html#categories_section">
-                Back to Categories
-            </a>
-
-        </div>
-
-    </section>
+    </main>
 
 
     <!-- Footer -->
