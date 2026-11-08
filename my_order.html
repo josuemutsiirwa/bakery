@@ -1,11 +1,232 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <meta name="description" content="Place your order at Peter's Bakery. Choose your favourite products and provide your delivery details.">
+
+    <title>My Order | Peter's Bakery</title>
+
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" aria-label="Main navigation">
+
+        <a href="./index.html" class="logo">Peter's Bakery</a>
+
+        <ul class="nav-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./products.html">Our Products</a></li>
+            <li><a href="./about_us.html">About Us</a></li>
+            <li><a href="./index.html#contact">Contact</a></li>
+            <li><a href="./my_order.html" class="active">My Order</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- Order Page Header -->
+    <header class="order-hero">
+        <h1>My Order</h1>
+        <p>We are happy to serve you! Complete the form below to prepare your order.</p>
+    </header>
+
+
+    <main class="order-main">
+
+        <!-- Selected Products Section -->
+        <section class="order-summary">
+
+            <h2>Your Selected Products</h2>
+
+            <p class="empty-cart-message">
+                You have not added any products yet.
+                Browse our menu and click "Add to Cart" to select your favourite products.
+            </p>
+
+            <a href="./products.html" class="continue-shopping">
+                Continue Shopping
+            </a>
+
+            <!-- JavaScript will display selected products here later -->
+
+            <div id="cart-items"></div>
+
+            <div class="cart-total">
+                <strong>Total:</strong>
+                <span id="cart-total">Ksh 0</span>
+            </div>
+
+        </section>
+
+
+        <!-- Customer Order Form -->
+        <section class="order-form-section">
+
+            <div class="order-form-heading">
+                <h2>Customer Information</h2>
+                <p>Please provide your details so we can prepare and deliver your order.</p>
+            </div>
+
+
+            <form id="customer-order-form">
+
+                <!-- Personal Information -->
+                <fieldset>
+
+                    <legend>Personal Information</legend>
+
+                    <div class="form-group">
+                        <label for="customer-name">Full Name *</label>
+                        <input
+                            type="text"
+                            id="customer-name"
+                            name="customerName"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required>
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="customer-email">Email Address *</label>
+                            <input
+                                type="email"
+                                id="customer-email"
+                                name="email"
+                                placeholder="example@email.com"
+                                autocomplete="email"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customer-phone">Phone Number *</label>
+                            <input
+                                type="tel"
+                                id="customer-phone"
+                                name="phone"
+                                placeholder="+254 7XX XXX XXX"
+                                autocomplete="tel"
+                                required>
+                        </div>
+
+                    </div>
+
+                </fieldset>
+
+
+                <!-- Delivery Information -->
+                <fieldset>
+
+                    <legend>Delivery Information</legend>
+
+                    <div class="form-group">
+                        <label for="delivery-address">Delivery Address *</label>
+                        <textarea
+                            id="delivery-address"
+                            name="address"
+                            rows="3"
+                            placeholder="Enter your town, estate, street and building details"
+                            autocomplete="street-address"
+                            required></textarea>
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="delivery-date">Preferred Delivery Date *</label>
+                            <input
+                                type="date"
+                                id="delivery-date"
+                                name="deliveryDate"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="delivery-time">Preferred Delivery Time *</label>
+                            <input
+                                type="time"
+                                id="delivery-time"
+                                name="deliveryTime"
+                                required>
+                        </div>
+
+                    </div>
+
+                </fieldset>
+
+
+                <!-- Preparation Instructions -->
+                <fieldset>
+
+                    <legend>Preparation Preferences</legend>
+
+                    <div class="form-group">
+                        <label for="preparation-instructions">
+                            How would you like your products prepared?
+                        </label>
+
+                        <textarea
+                            id="preparation-instructions"
+                            name="preparationInstructions"
+                            rows="4"
+                            placeholder="For example: Use less spice, avoid a particular ingredient, make the cake less sweet, or use special packaging."></textarea>
+                    </div>
+
+                </fieldset>
+
+
+                <!-- Additional Comments -->
+                <fieldset>
+
+                    <legend>Additional Comments</legend>
+
+                    <div class="form-group">
+                        <label for="additional-comments">
+                            Any other information about your order?
+                        </label>
+
+                        <textarea
+                            id="additional-comments"
+                            name="comments"
+                            rows="4"
+                            placeholder="Write any additional comments or requests here..."></textarea>
+                    </div>
+
+                </fieldset>
+
+
+                <!-- Submit Button -->
+                <div class="order-submit">
+
+                    <p>
+                        Please check that your information is correct before placing your order.
+                    </p>
+
+                    <button type="button" id="place-order-btn">
+                        Place Order
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Peter's Bakery. All Rights Reserved.</p>
+    </footer>
+
+
 </body>
 </html>
